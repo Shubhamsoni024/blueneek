@@ -9,19 +9,19 @@ RUN yum update -y &&  \
     yum install applydeltarpm httpd git wget zip unzip net-tools -y
 
 ### Adding the developer website to the Apache DocumentRoot
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page277/blueneek.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page276/jon.zip /var/www/html/
 
 ## Changing the Working directory
 WORKDIR /var/www/html/
 
 ## Extracting the content
-RUN unzip blueneek.zip
+RUN unzip jon.zip
 
 ### Copying the configuration files to the main documentroot to run
-RUN cp -rvf blueneek/* .
+RUN cp -rvf jon/* .
 
 ### Removing the zip and empty website folder
-RUN rm -rf blueneek.zip blueneek
+RUN rm -rf jon.zip jon.zip
 
 ### Environment variable
 ENV myname shubham_webhost
