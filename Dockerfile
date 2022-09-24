@@ -1,7 +1,7 @@
 ### Now we are working the docker component
 FROM centos:7
 
-### Owner of the configuration file
+### Owner of the Docker configuration file
 MAINTAINER shubham.soni@rglabs.net
 
 ### Running the os update and installing the apache package
