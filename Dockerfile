@@ -9,19 +9,19 @@ RUN yum update -y &&  \
     yum install applydeltarpm httpd git wget zip unzip net-tools -y
 
 ### Adding the developer website to the Apache DocumentRoot
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page276/jon.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page276/petlover.zip /var/www/html/
 
 ## Changing the Working directory
 WORKDIR /var/www/html/
 
 ## Extracting the content
-RUN unzip jon.zip
+RUN unzip petlover.zip
 
 ### Copying the configuration files to the main documentroot to run
-RUN cp -rvf jon/* .
+RUN cp -rvf pet-care-website-template/* .
 
 ### Removing the zip and empty website folder
-RUN rm -rf jon.zip jon.zip
+RUN rm -rf petlover.zip pet-care-website-template
 
 ### Environment variable
 ENV myname shubham_webhost
